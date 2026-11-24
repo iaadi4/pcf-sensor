@@ -1,0 +1,121 @@
+{
+ "neff H>V [lam]": [
+  63,
+  63,
+  []
+ ],
+ "neff H>V [eta]": [
+  27,
+  27,
+  []
+ ],
+ "B V>H [lam]": [
+  62,
+  63,
+  [
+   "0.7/1.33"
+  ]
+ ],
+ "B V>H [eta]": [
+  26,
+  27,
+  [
+   "0.6/1.33"
+  ]
+ ],
+ "loss H>V [lam]": [
+  62,
+  63,
+  [
+   "0.8/1.33"
+  ]
+ ],
+ "loss H>V [eta]": [
+  24,
+  27,
+  [
+   "1.0/1.33",
+   "1.0/1.354",
+   "1.0/1.366"
+  ]
+ ],
+ "r V>H [lam]": [
+  61,
+  63,
+  [
+   "0.7/1.33",
+   "0.8/1.33"
+  ]
+ ],
+ "r V>H [eta]": [
+  27,
+  27,
+  []
+ ],
+ "neff decreases with lam": [
+  119,
+  120,
+  [
+   "V/1.33/0.75"
+  ]
+ ],
+ "neff decreases with eta": [
+  48,
+  48,
+  []
+ ],
+ "B increases with lam": [
+  114,
+  120,
+  [
+   "H/1.33/0.75",
+   "H/1.33/0.85",
+   "H/1.354/0.75",
+   "V/1.33/0.8",
+   "V/1.33/0.85",
+   "V/1.354/0.75"
+  ]
+ ],
+ "B decreases with eta": [
+  48,
+  48,
+  []
+ ],
+ "loss decreases with eta": [
+  48,
+  48,
+  []
+ ],
+ "r increases with lam": [
+  119,
+  120,
+  [
+   "V/1.33/0.8"
+  ]
+ ],
+ "r increases with eta": [
+  48,
+  48,
+  []
+ ],
+ "neff increases with analyte index": [
+  60,
+  60,
+  []
+ ],
+ "loss decreases with analyte index": [
+  60,
+  60,
+  []
+ ],
+ "r increases with analyte index": [
+  60,
+  60,
+  []
+ ],
+ "B decreases with analyte index": [
+  60,
+  60,
+  []
+ ]
+}
