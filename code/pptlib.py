@@ -33,12 +33,17 @@ class Deck:
         self.n += 1; self.text(s, 12.0, 7.0, .75, .3, str(self.n + 1), 10, MUTE, align=PP_ALIGN.RIGHT)
         if notes: s.notes_slide.notes_text_frame.text = notes
         return s
-    def dark(self, title, sub, notes="", size=40):
+    def dark(self, title, sub, notes="", size=40, ref=None):
         s = self.P.slides.add_slide(self.lay); s.background.fill.solid(); s.background.fill.fore_color.rgb = C(DK)
-        t = s.shapes.title; t.left, t.top, t.width, t.height = I(.9), I(1.5), I(11.5), I(2.3); t.text_frame.word_wrap = True
+        t = s.shapes.title; t.left, t.top, t.width, t.height = I(.9), I(.7 if ref else 1.5), I(11.5), I(2.0 if ref else 2.3); t.text_frame.word_wrap = True
         t.text_frame.vertical_anchor = MSO_ANCHOR.BOTTOM; t.text_frame.margin_left = 0
         p = t.text_frame.paragraphs[0]; p.alignment = PP_ALIGN.LEFT; self.run(p, title, size, WHITE, True)
-        self.text(s, .9, 4.1, 11.5, 2.8, sub, 20, "CFE6E8", gap=10)
+        self.text(s, .9, 3.0 if ref else 4.1, 11.5, 2.4 if ref else 2.8, sub, 20, "CFE6E8", gap=8)
+        if ref:
+            self.text(s, .9, 5.6, 11.5, .35, "Reference paper", 13, "8FC3C8", True)
+            b = self.text(s, .9, 5.95, 11.5, 1.0, "", 14, "CFE6E8"); p = b.text_frame.paragraphs[0]
+            for part, it in zip(ref, (False, True, False)):
+                r = p.add_run(); r.text = part; f = r.font; f.size, f.name, f.italic, f.color.rgb = Pt(14), "Arial", it, C("CFE6E8")
         if notes: s.notes_slide.notes_text_frame.text = notes
         return s
     @staticmethod

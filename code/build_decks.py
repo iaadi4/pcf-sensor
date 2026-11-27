@@ -13,9 +13,12 @@ def curves(sw, q, fig, kinds="VH", ns=(1.366, 1.354, 1.33), sc=1):
             out.append((f"paper {k} {n}", g.x, g.value*sc, NC[n], k == "H", MK[n]))
     return out
 
+REF = ('[1] H. Ademgil and S. Haxha, “PCF based sensor with high sensitivity, high birefringence and low confinement losses '
+       'for liquid analyte sensing applications,” ', "Sensors", ', vol. 15, no. 12, pp. 31833–31842, Dec. 2015, doi: 10.3390/s151229891.')
+WHO = ["Rishit Bajaj (2023UG4028)", "Electronics and Communication (ES & IoT)", "Supervisor: Dr. Akash Srivastava"]
 # ===================================================================== 1. progress
 D = Deck("Progress review: PCF liquid sensor")
-D.dark("Photonic crystal fibre sensor for liquid analytes", ["Minor project: progress review", "Rishit Bajaj (2023UG4028)"],
+D.dark("Photonic crystal fibre sensor for liquid analytes", ["Minor project: progress review"] + WHO, ref=REF, notes=
   "Introduce yourself, the topic and that this is a progress review.")
 s = D.slide("A fibre can sense a liquid that fills holes in its core", "A PCF is a glass fibre with air holes along its length. If holes in the core are filled with a liquid, part of the light travels in the liquid. The larger that part, the more sensitive the sensor.")
 D.pic(s, "study_dims.png", .5, 1.5, 6.3, 5.5, "V-PCF cross-section")
@@ -46,7 +49,7 @@ D.save("../presentation/1_Progress_Presentation.pptx")
 
 # ===================================================================== 2. final
 D = Deck("PCF liquid sensor: final presentation")
-D.dark("Reproducing a PCF sensor for liquid analytes", ["Ademgil & Haxha, Sensors 15, 31833 (2015)", "Minor project  |  Rishit Bajaj (2023UG4028)"],
+D.dark("Reproducing a PCF sensor for liquid analytes", ["Minor project"] + WHO, ref=REF, notes=
   "Good morning. My project reproduces a 2015 paper on a photonic crystal fibre that senses liquids, checks every claim, and adds an extension.")
 s = D.slide("Elliptical holes target three goals at once", "Liquid fills seven core holes. V and H have the same holes, vertical or horizontal. The dimensions in the paper are semi-axes: Fig. 3 shows 1.4 x 2.0 um holes, and only this reading gives r = 20.59 %.", 28)
 D.pic(s, "fig1_geometry.png", .5, 1.45, 7.9, 4.2, "Geometry")
